@@ -78,7 +78,7 @@ int main(int argc, char** argv) {
         }
 
         // create blank frame
-        cv::Mat frame(canvasSize, CV_8UC3, cv::Scalar(10, 10, 30)); // dark background
+        cv::Mat frame(canvasSize, CV_8UC3, cv::Scalar(0, 0, 0)); // dark background
 
         // draw circles
         cv::Point center(canvasSize.width/2, canvasSize.height/2);
@@ -86,7 +86,7 @@ int main(int argc, char** argv) {
         for (int b = 0; b < NBANDS; ++b) {
             float normVal = bands[b] / (*std::max_element(bands.begin(), bands.end()) + 1e-6f);
             float radius = normVal * maxRadius;
-            if (radius < 60){radius = radius + 60;}
+            radius = radius + 50;
             int thickness = 2;
             int colorHue = static_cast<int>(b * 180 / NBANDS);
             cv::Scalar color;
