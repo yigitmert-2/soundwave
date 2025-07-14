@@ -1,3 +1,0 @@
-/home/mert/soundwave_project/build/CMakeFiles/spectrogram.dir
-/home/mert/soundwave_project/build/CMakeFiles/edit_cache.dir
-/home/mert/soundwave_project/build/CMakeFiles/rebuild_cache.dir
