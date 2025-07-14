@@ -2,7 +2,7 @@ spectrogram: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o \
-  CMakeFiles/spectrogram.dir/main.cpp.o \
+  CMakeFiles/spectrogram.dir/spectogram.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libsndfile.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libfftw3.so \
   /usr/lib/libopencv_gapi.so.4.12.0 \
@@ -433,7 +433,7 @@ spectrogram: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o:
 
-CMakeFiles/spectrogram.dir/main.cpp.o:
+CMakeFiles/spectrogram.dir/spectogram.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libsndfile.so:
 

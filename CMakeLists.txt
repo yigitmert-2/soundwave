@@ -5,9 +5,10 @@ find_package(SndFile REQUIRED)
 find_package(FFTW3 REQUIRED)
 find_package(OpenCV REQUIRED)
 
-add_executable(spectrogram main.cpp)
+add_executable(spectrogram spectogram.cpp)
 target_link_libraries(spectrogram
     sndfile
     fftw3
     ${OpenCV_LIBS}
+    
 )

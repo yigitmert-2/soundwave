@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mert/soundwave_project/main.cpp" "CMakeFiles/spectrogram.dir/main.cpp.o" "gcc" "CMakeFiles/spectrogram.dir/main.cpp.o.d"
+  "/home/mert/soundwave_project/spectogram.cpp" "CMakeFiles/spectrogram.dir/spectogram.cpp.o" "gcc" "CMakeFiles/spectrogram.dir/spectogram.cpp.o.d"
   "" "spectrogram" "gcc" "CMakeFiles/spectrogram.dir/link.d"
   )
 

@@ -224,6 +224,9 @@ OpenCV_DIR:PATH=/usr/lib/cmake/opencv4
 //The directory containing a CMake configuration file for SndFile.
 SndFile_DIR:PATH=/usr/lib/cmake/SndFile
 
+//The directory containing a CMake configuration file for sfml-graphics.
+sfml-graphics_DIR:PATH=sfml-graphics_DIR-NOTFOUND
+
 //Value Computed by CMake
 spectrogram_BINARY_DIR:STATIC=/home/mert/soundwave_project/build
 

@@ -129,29 +129,29 @@ spectrogram/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/spectrogram.dir/build.make CMakeFiles/spectrogram.dir/build
 .PHONY : spectrogram/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+spectogram.o: spectogram.cpp.o
+.PHONY : spectogram.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spectrogram.dir/build.make CMakeFiles/spectrogram.dir/main.cpp.o
-.PHONY : main.cpp.o
+spectogram.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spectrogram.dir/build.make CMakeFiles/spectrogram.dir/spectogram.cpp.o
+.PHONY : spectogram.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+spectogram.i: spectogram.cpp.i
+.PHONY : spectogram.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spectrogram.dir/build.make CMakeFiles/spectrogram.dir/main.cpp.i
-.PHONY : main.cpp.i
+spectogram.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spectrogram.dir/build.make CMakeFiles/spectrogram.dir/spectogram.cpp.i
+.PHONY : spectogram.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+spectogram.s: spectogram.cpp.s
+.PHONY : spectogram.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spectrogram.dir/build.make CMakeFiles/spectrogram.dir/main.cpp.s
-.PHONY : main.cpp.s
+spectogram.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spectrogram.dir/build.make CMakeFiles/spectrogram.dir/spectogram.cpp.s
+.PHONY : spectogram.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... spectrogram"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... spectogram.o"
+	@echo "... spectogram.i"
+	@echo "... spectogram.s"
 .PHONY : help
 
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/spectrogram.dir/link.d"
-  "CMakeFiles/spectrogram.dir/main.cpp.o"
-  "CMakeFiles/spectrogram.dir/main.cpp.o.d"
+  "CMakeFiles/spectrogram.dir/spectogram.cpp.o"
+  "CMakeFiles/spectrogram.dir/spectogram.cpp.o.d"
   "spectrogram"
   "spectrogram.pdb"
 )

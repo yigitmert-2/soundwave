@@ -72,28 +72,28 @@ include CMakeFiles/spectrogram.dir/flags.make
 CMakeFiles/spectrogram.dir/codegen:
 .PHONY : CMakeFiles/spectrogram.dir/codegen
 
-CMakeFiles/spectrogram.dir/main.cpp.o: CMakeFiles/spectrogram.dir/flags.make
-CMakeFiles/spectrogram.dir/main.cpp.o: /home/mert/soundwave_project/main.cpp
-CMakeFiles/spectrogram.dir/main.cpp.o: CMakeFiles/spectrogram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mert/soundwave_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spectrogram.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/spectrogram.dir/main.cpp.o -MF CMakeFiles/spectrogram.dir/main.cpp.o.d -o CMakeFiles/spectrogram.dir/main.cpp.o -c /home/mert/soundwave_project/main.cpp
+CMakeFiles/spectrogram.dir/spectogram.cpp.o: CMakeFiles/spectrogram.dir/flags.make
+CMakeFiles/spectrogram.dir/spectogram.cpp.o: /home/mert/soundwave_project/spectogram.cpp
+CMakeFiles/spectrogram.dir/spectogram.cpp.o: CMakeFiles/spectrogram.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mert/soundwave_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spectrogram.dir/spectogram.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/spectrogram.dir/spectogram.cpp.o -MF CMakeFiles/spectrogram.dir/spectogram.cpp.o.d -o CMakeFiles/spectrogram.dir/spectogram.cpp.o -c /home/mert/soundwave_project/spectogram.cpp
 
-CMakeFiles/spectrogram.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/spectrogram.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mert/soundwave_project/main.cpp > CMakeFiles/spectrogram.dir/main.cpp.i
+CMakeFiles/spectrogram.dir/spectogram.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/spectrogram.dir/spectogram.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mert/soundwave_project/spectogram.cpp > CMakeFiles/spectrogram.dir/spectogram.cpp.i
 
-CMakeFiles/spectrogram.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/spectrogram.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mert/soundwave_project/main.cpp -o CMakeFiles/spectrogram.dir/main.cpp.s
+CMakeFiles/spectrogram.dir/spectogram.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/spectrogram.dir/spectogram.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mert/soundwave_project/spectogram.cpp -o CMakeFiles/spectrogram.dir/spectogram.cpp.s
 
 # Object files for target spectrogram
 spectrogram_OBJECTS = \
-"CMakeFiles/spectrogram.dir/main.cpp.o"
+"CMakeFiles/spectrogram.dir/spectogram.cpp.o"
 
 # External object files for target spectrogram
 spectrogram_EXTERNAL_OBJECTS =
 
-spectrogram: CMakeFiles/spectrogram.dir/main.cpp.o
+spectrogram: CMakeFiles/spectrogram.dir/spectogram.cpp.o
 spectrogram: CMakeFiles/spectrogram.dir/build.make
 spectrogram: CMakeFiles/spectrogram.dir/compiler_depend.ts
 spectrogram: /usr/lib/libopencv_gapi.so.4.12.0
