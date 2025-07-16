@@ -12,6 +12,6 @@ IN PROGRESS
 
 -reactive background (looks cool)
 
---will not add
+--will not add:
 
 -the secret to being happy (maybe later)
