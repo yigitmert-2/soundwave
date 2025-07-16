@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
             bands[b] = static_cast<float>(acc / binsPerBand);
         }
 
-        // create reactive background frame
+        // create reactive background frame (need improvement)
         float bassMedian;
         for (int i = 0; i < NBANDS/8; ++i){
             bassMedian += bands[i];
