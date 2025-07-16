@@ -79,8 +79,14 @@ int main(int argc, char** argv) {
             bands[b] = static_cast<float>(acc / binsPerBand);
         }
 
-        // create blank frame
-        cv::Mat frame(canvasSize, CV_8UC3, cv::Scalar(0, 0, 0)); // dark background
+        // create reactive background frame
+        float bassMedian;
+        for (int i = 0; i < NBANDS/8; ++i){
+            bassMedian += bands[i];
+        }
+        bassMedian = bassMedian / 8;
+        float alpha = bassMedian * 255 * 0.005;
+        cv::Mat frame(canvasSize, CV_8UC3, cv::Scalar(alpha, alpha, alpha)); // dark background
 
         // draw circles
         /*cv::Point center(canvasSize.width/2, canvasSize.height/2);
