@@ -1,5 +1,7 @@
+#include <algorithm>
 #include <iostream>
 #include <filesystem>
+#include <ostream>
 #include <sndfile.h>
 #include <fftw3.h>
 #include <opencv2/opencv.hpp>
@@ -67,7 +69,7 @@ int main(int argc, char** argv) {
         fftw_execute(plan);
 
         // compute magnitudes for bands
-        int NBANDS = 8;
+        int NBANDS = 64;
         int binsPerBand = freqBins / NBANDS;
         std::vector<float> bands(NBANDS);
         for (int b = 0; b < NBANDS; ++b) {
@@ -81,7 +83,7 @@ int main(int argc, char** argv) {
         cv::Mat frame(canvasSize, CV_8UC3, cv::Scalar(0, 0, 0)); // dark background
 
         // draw circles
-        cv::Point center(canvasSize.width/2, canvasSize.height/2);
+        /*cv::Point center(canvasSize.width/2, canvasSize.height/2);
         float maxRadius = std::min(canvasSize.width, canvasSize.height) * 0.45f;
         for (int b = 0; b < NBANDS; ++b) {
             float normVal = bands[b] / (*std::max_element(bands.begin(), bands.end()) + 1e-6f);
@@ -93,8 +95,34 @@ int main(int argc, char** argv) {
             cv::Mat hsv(1,1,CV_8UC3, cv::Scalar(colorHue, 200, 255));
             cv::cvtColor(hsv, hsv, cv::COLOR_HSV2BGR);
             color = cv::Scalar(hsv.data[0], hsv.data[1], hsv.data[2]);
-            cv::circle(frame, center, static_cast<int>(radius), color, thickness);
+            cv::circle(frame, center, static_cast<int>(radius), color, thickness); 
+        */
+
+        //draw radial bar graph
+        double angle = (2 * M_PI) / NBANDS;
+        float maxRadius = std::min(canvasSize.width, canvasSize.height) * 0.45f;
+        int centerX = canvasSize.width / 2; 
+        int centerY = canvasSize.height / 2;
+        for (int b = 0; b < NBANDS; ++b){
+            float normVal = bands[b] / (*std::max_element(bands.begin(), bands.end()) + 1e-6f);
+            float barLenght = normVal * maxRadius;
+            int thickness = 3;
+            float angle_of_bar = b * angle;
+            float cx = centerX + 50 * cos(angle_of_bar);
+            float cy = centerY + 50 * sin(angle_of_bar);
+            float tipOfBar_x = cx + barLenght * cos(angle_of_bar);
+            float tipOfBar_y = cy + barLenght * sin(angle_of_bar);
+            int colorHue = static_cast<int>(b * 180 / NBANDS);
+            cv::Scalar color;
+            cv::Mat hsv(1,1,CV_8UC3, cv::Scalar(colorHue, 200, 255));
+            cv::cvtColor(hsv, hsv, cv::COLOR_HSV2BGR);
+            color = cv::Scalar(hsv.data[0], hsv.data[1], hsv.data[2]);
+            cv::Point center(cx, cy);
+            cv::Point end(tipOfBar_x, tipOfBar_y);
+            cv::line(frame, center, end, color, thickness);
         }
+
+        
 
        
         // write frame
